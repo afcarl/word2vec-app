@@ -1,0 +1,4 @@
+baseURL = "http://word2vec.danielfrg.com/"
+languageCode = "en-us"
+title = "word2vec app | Daniel Rodriguez"
+theme = "app"
