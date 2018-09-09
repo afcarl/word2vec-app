@@ -3,13 +3,17 @@
 
 <div class="container">
     <div class="row">
-        <h1 class="title">WORD2VEC</h1>
-        <h2 class="subtitle">Word embedding functions</h2>
+        <div id="header" class="col">
+            <h1 class="title">WORD2VEC</h1>
+            <h2 class="subtitle">Word embedding functions</h2>
+            <p class="very-small">Status: {{ "{{ status }}" }}</p>
+        </div>
     </div>
 
     <div class="row">
         <div id="similar" class="col-md-6">
             <div class="box">
+                <div class="snipper spin" v-bind:class="{ hide: !spinner }"></div>
                 <h2>Top N similar</h2>
                 <p>Find the most similar words</p>
                 <div class="container">
@@ -55,6 +59,7 @@
             <div class="box">
                 <h2>Word Analogies</h2>
                 <p>Find the most similar words</p>
+                <div class="snipper spin" v-bind:class="{ hide: !spinner }"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-6 first-col"><input v-model="pos[0].v" type="text" placeholder="POSITIVE"></div>
@@ -104,7 +109,7 @@
 
     <div class="row">
         <div class="col">
-        <p class="footer">
+        <p class="very-small">
             <a href="https://github.com/danielfrg/word2vec-app">Code on Github</a>.
             <a href="https://danielfrg.com/blog/2018/09/word2vec-app-algorithmia/">More info</a>.
             Built by <a href="https://danielfrg.com/">Daniel Rodriguez</a>.
