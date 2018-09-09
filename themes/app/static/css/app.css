@@ -8,18 +8,42 @@ body {
 
 h1.title {
   color: #ffffff;
-  font-size: 12em;
   text-align: center;
+  width: 100%;
   text-shadow: 6px 6px 0px #000;
   font-family: "Anton", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 20vw;
 }
 
-.subtitle {
+@media screen and (min-width: 992px) {
+  h1.title {
+    font-size: 12em;
+  }
+}
+
+h2.subtitle {
   color: #313638;
-  font-size: 2.4em;
   text-align: center;
-  margin-top: -50px;
+  width: 100%;
+  margin-top: -4vw;
   font-family: "Anton", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 5.5vw;
+}
+
+@media screen and (min-width: 992px) {
+  h2.subtitle {
+    font-size: 2.4em;
+    margin-top: -1em;
+  }
+}
+
+a {
+  color: #313638;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #fff;
 }
 
 .center {
@@ -27,8 +51,8 @@ h1.title {
 }
 
 .box {
-  margin: 20px;
   padding: 15px;
+  margin-bottom: 15px;
   background: #FC754D;
 }
 
@@ -43,19 +67,11 @@ h1.title {
   font-size: 0.7em;
 }
 
-.box a {
-  color: #313638;
-  text-decoration: underline;
-}
-
-.box a:hover {
-  color: #fff;
-}
-
 .box input {
   border: 3px solid #fff;
-  min-height: 46px;
+  width: 100%;
   height: 100%;
+  min-height: 46px;
   text-transform: lowercase;
 }
 
@@ -65,6 +81,10 @@ h1.title {
 
 .box .row .col-6 {
   padding: 0;
+}
+
+.box .row .first-col {
+  padding-right: 10px;
 }
 
 .box .response table {
@@ -116,4 +136,9 @@ h1.title {
   color: #fff;
   background-color: #313638;
   border: 3px solid #313638;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.6em;
 }
