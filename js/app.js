@@ -9,7 +9,7 @@ var header = new Vue({
         query: function (event) {
             console.log("Getting status");
             var input = {"status": ""}
-            
+
             algorithm.pipe(input).then((response) => {
                 console.log("Analogy response: " + response);
 
@@ -49,14 +49,14 @@ var similar = new Vue({
                 this.error = "";
                 this.data = [];
                 this.spinner = true;
-                
+
                 var input = {
                     "similar": {
                         "word": this.word,
                         "n": 10
                     }
                 }
-                
+
                 algorithm.pipe(input).then((response) => {
                     console.log("Similar response: " + response);
                     this.spinner = false;
@@ -109,13 +109,13 @@ var analogy = new Vue({
         query: function (event) {
             pos = this.pos.map(x => x["v"]).filter(Boolean);
             neg = this.neg.map(x => x["v"]).filter(Boolean);
-            
+
             if (pos.length > 0 || neg.length > 0) {
                 console.log("Querying analogy: " + pos + " - " + neg);
                 this.error = "";
                 this.data = [];
                 this.spinner = true;
-                
+
                 var input = {
                     "analogy": {
                         "pos": pos,
@@ -123,7 +123,7 @@ var analogy = new Vue({
                         "n": 10
                     }
                 }
-                
+
                 algorithm.pipe(input).then((response) => {
                     console.log("Analogy response: " + response);
                     this.spinner = false;
