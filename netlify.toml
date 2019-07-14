@@ -1,0 +1,4 @@
+[build]
+base = "app/"
+publish = "app/"
+command = "echo noop"
