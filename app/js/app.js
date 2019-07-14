@@ -31,7 +31,6 @@ var header = new Vue({
 header.query();
 header.query();
 
-
 var similar = new Vue({
     el: "#similar",
     data: function () {
@@ -92,7 +91,6 @@ var similar = new Vue({
         }
     }
 });
-
 
 var analogy = new Vue({
     el: "#analogy",
