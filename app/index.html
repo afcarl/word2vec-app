@@ -15,8 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
     <script src="//algorithmia.com/v1/clients/js/algorithmia-0.2.0.js" type="text/javascript"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script> -->
 </head>
 
 <body>
@@ -58,14 +58,14 @@
                         </thead>
                         <tbody>
                             <tr v-for="entry in data">
-                                <td class="word">{{ "{{ entry[0] }}" }}</td>
-                                <td class="distance">{{ "{{ entry[1] }}" }}</td>
+                                <td class="word">"{{ entry[0] }}"</td>
+                                <td class="distance">"{{ entry[1] }}"</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <p class="error">{{ "{{ error }}" }}</p>
+                <p class="error">"{{ error }}"</p>
 
                 <p class="small">For example:
                     <a v-on:click="ex_france" href="#">France</a>,
@@ -108,14 +108,14 @@
                         </thead>
                         <tbody>
                             <tr v-for="entry in data">
-                                <td class="word">{{ "{{ entry[0] }}" }}</td>
-                                <td class="distance">{{ "{{ entry[1] }}" }}</td>
+                                <td class="word">"{{ entry[0] }}"</td>
+                                <td class="distance">"{{ entry[1] }}"</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <p class="error">{{ "{{ error }}" }}</p>
+                <p class="error">"{{ error }}"</p>
 
                 <p class="small">For example:
                     <a v-on:click="ex_queen" href="#">King - Man + Woman</a>,
