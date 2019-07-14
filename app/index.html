@@ -65,7 +65,7 @@
                     </table>
                 </div>
 
-                <p class="error">"{{ error }}"</p>
+                <p class="error" v-if="error_view">"{{ error }}"</p>
 
                 <p class="small">For example:
                     <a v-on:click="ex_france" href="#">France</a>,
@@ -115,7 +115,7 @@
                     </table>
                 </div>
 
-                <p class="error">"{{ error }}"</p>
+                <p class="error" v-if="error_view">"{{ error }}"</p>
 
                 <p class="small">For example:
                     <a v-on:click="ex_queen" href="#">King - Man + Woman</a>,

@@ -39,6 +39,7 @@ var similar = new Vue({
             data: [],
             spinner: false,
             error: "",
+            error_view: false,
         }
     },
     methods: {
@@ -61,6 +62,7 @@ var similar = new Vue({
                     this.spinner = false;
 
                     if(response.error) {
+                        this.error_view = true;
                         this.error = response["error"];
                     }
                     else if (response["result"]["error"]) {
@@ -101,6 +103,7 @@ var analogy = new Vue({
             spinner: false,
             data: [],
             error: "",
+            error_view: false,
         }
     },
     methods: {
@@ -127,6 +130,7 @@ var analogy = new Vue({
                     this.spinner = false;
 
                     if(response.error) {
+                        this.error_view = true;
                         this.error = response["error"];
                     }
                     else if (response["result"]["error"]) {
